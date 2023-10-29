@@ -17,6 +17,10 @@ import Transloc3Parser from './Transloc3Parser';
 class Configuration {
     constructor() {
         this.center = [33.205381, -87.557197];
+        this.tileserver = {
+            url: 'https://tuscaloosa.gotransitapp.com/tiles/{z}/{x}/{y}.png',
+            subdomains: ''
+        };
 
         this.agencies = [
             {
