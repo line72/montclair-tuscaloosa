@@ -12,7 +12,7 @@
  * Licensed Under the GPLv3
  *******************************************/
 
-import Transloc3Parser from './Transloc3Parser';
+import GTFSRTParser from './GTFSRTParser';
 
 class Configuration {
     constructor() {
@@ -25,7 +25,10 @@ class Configuration {
         this.agencies = [
             {
                 name: 'Routes',
-                parser: new Transloc3Parser(873, 'https://tuscaloosa.gotransitapp.com/api/no.php/3/')
+                parser: new GTFSRTParser('montclair',
+                                         '/tuscaloosa_transit.zip',
+                                         'https://tuscaloosa.gotransitapp.com/api/no.php/passioTransit/gtfs/realtime/vehiclePositions',
+                                         'https://tuscaloosa.gotransitapp.com/api/no.php/passioTransit/gtfs/realtime/tripUpdates')
             }
         ];
     }
